@@ -21,6 +21,8 @@ zstyle ':omz:update' frequency 1
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 	python
 	adb
 	colored-man-pages
@@ -30,8 +32,7 @@ plugins=(
 	git-prompt
 	git
 	thefuck
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+	history
 )
 
 # cd into newly made directory
@@ -39,7 +40,10 @@ mkcd(){ mkdir "$1" && cd "$1"; }
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+eval "$(zoxide init --cmd cd zsh)"
+
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
