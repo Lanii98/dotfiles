@@ -21,7 +21,6 @@ zstyle ':omz:update' frequency 1
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-	zsh-autosuggestions
 	zsh-syntax-highlighting
 	python
 	adb
@@ -31,12 +30,15 @@ plugins=(
 	dnf
 	git-prompt
 	git
-	thefuck
 	history
 )
 
 # cd into newly made directory
 mkcd(){ mkdir "$1" && cd "$1"; }
+
+function ashare() {
+	cd /home/lana/Applications && ./AudioShare -b 192.168.15.177
+}
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
