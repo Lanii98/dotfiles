@@ -35,11 +35,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -116,11 +116,18 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 alias cat="bat"
 alias ls="lsd --group-directories-first -a --color always"
 
-# Function to search YT Music and play the first result
+# Yt-dlp 
+alias yta-aac='yt-dlp --extract-audio --audio-format aac '
+alias yta-best='yt-dlp --extract-audio --audio-format best '
+alias yta-flac='yt-dlp --extract-audio --audio-format flac '
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
+alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
+
+
+# Search YT Music and play the first result
 ytmusic () {
     SEARCH_QUERY="$*"
     mpv --no-audio-display --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
