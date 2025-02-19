@@ -126,6 +126,9 @@ alias yta-flac='yt-dlp --extract-audio --audio-format flac '
 alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
 
+mkcd(){ 
+    mkdir "$1" && cd "$1"; 
+}
 
 # Search YT Music and play the first result
 ytmusic () {
