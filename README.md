@@ -12,6 +12,11 @@
 - ## Aliases
     * cat="bat"
     * ls="lsd --group-directories-first -a --color always"
+    * dnfi="sudo dnf install "
+    * dnfu="sudo dnf upgrade"
+    * dnfa="sudo dnf autoremove"
+    * dnfc="dnf check-upgrade"
+    * dnfs="dnf search "
     * yta-aac='yt-dlp --extract-audio --audio-format aac '
     * yta-best='yt-dlp --extract-audio --audio-format best '
     * yta-flac='yt-dlp --extract-audio --audio-format flac '
