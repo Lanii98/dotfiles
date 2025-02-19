@@ -133,8 +133,15 @@ alias yta-flac='yt-dlp --extract-audio --audio-format flac '
 alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
 
+# DNF aliases
+alias dnfi="sudo dnf install "
+alias dnfu="sudo dnf upgrade"
+alias dnfa="sudo dnf autoremove"
+alias dnfc="dnf check-upgrade"
+alias dnfs="dnf search "
+
 # Search YT Music and play the first result
 ytm () {
     SEARCH_QUERY="$*"
-    mpv --no-audio-display --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
+    mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
 }
