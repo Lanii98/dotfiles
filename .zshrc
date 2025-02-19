@@ -121,7 +121,10 @@ alias cat="bat"
 alias ls="lsd --group-directories-first -a --color always"
 
 # Alias that runs a function to automatically move into the new directory
-alias mkdir='f() { mkdir $1 && cd $1 };f'
+alias mkdir='f() { 
+		     mkdir $1 && cd $1 
+		 };
+		 f'
 
 # Yt-dlp 
 alias yta-aac='yt-dlp --extract-audio --audio-format aac '
@@ -131,7 +134,7 @@ alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
 
 # Search YT Music and play the first result
-ytmusic () {
+ytm () {
     SEARCH_QUERY="$*"
     mpv --no-audio-display --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
 }
