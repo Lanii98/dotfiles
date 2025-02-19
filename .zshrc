@@ -116,8 +116,12 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Aliases to make cat and ls function nicer
 alias cat="bat"
 alias ls="lsd --group-directories-first -a --color always"
+
+# Alias that runs a function to automatically move into the new directory
+alias mkdir='f() { mkdir $1 && cd $1 };f'
 
 # Yt-dlp 
 alias yta-aac='yt-dlp --extract-audio --audio-format aac '
@@ -125,10 +129,6 @@ alias yta-best='yt-dlp --extract-audio --audio-format best '
 alias yta-flac='yt-dlp --extract-audio --audio-format flac '
 alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
-
-mkcd(){ 
-    mkdir "$1" && cd "$1"; 
-}
 
 # Search YT Music and play the first result
 ytmusic () {

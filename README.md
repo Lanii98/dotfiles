@@ -1,2 +1,2 @@
 # dotfiles
-dotfiles for zsh configuration
+dotfiles for zsh, nano and Fastfetch config + useful aliases and functions
