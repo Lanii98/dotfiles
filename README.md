@@ -42,7 +42,7 @@ ytm() {
     if [ -z "$input" ]; then
         # Display error in red and bold
         echo -e "${RED_BOLD}Error: Please provide a search query${RESET}"
-        ytmusic
+        ytm
         return 1
     fi
 
