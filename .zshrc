@@ -145,9 +145,6 @@ alias rms='rm /home/frieren/Pictures/Screenshots/Screenshot*'
 
 # Search YT Music and play the first result
 ytm () {
-    # Prompt user for search query
     read "input?Search Youtube Music....: "
-
-    # Play the selected music
     mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=${input}"
 }
