@@ -29,14 +29,30 @@
 
 ```zsh
 # Search YT Music and play the first result
-ytm () {
-    read "input?Search Youtube Music..: "
+ytm() {
+
+    # Define color constants
+    GREEN_BOLD=$'\033[1;32m'
+    RED_BOLD=$'\033[1;31m'
+    RESET=$'\033[0m'
+
+    # Prompt with green bold color
+    read "input?$GREEN_BOLD Search Youtube Music..: $RESET"
+
+    if [ -z "$input" ]; then
+        # Display error in red and bold
+        echo -e "${RED_BOLD}Error: Please provide a search query${RESET}"
+        ytmusic
+        return 1
+    fi
+
     mpv \
         --no-video \
         --quiet \
         --ytdl-raw-options=extract-audio= \
         "ytdl://https://music.youtube.com/search?q=${input}" \
         2>/dev/null
+
 }
 ```
 
