@@ -25,7 +25,7 @@
 
 - ## Functions
     * alias mkdir='f() { mkdir $1 && cd $1 };f'
-    * ytmusic()
+    * ytm()
 
 ```zsh
 # Search YT Music and play the first result
