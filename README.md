@@ -1,14 +1,14 @@
 # Dotfiles Repo
 ## Contains files for zsh, nano and Fastfetch config
 
-- ### .zshr: Contains esssential config for zsh shell 
+- ### .zshr: Contains esssential config for zsh shell
     * Displays Fastfetch on launch of terminal
     * Uses Frieren.txt for Fastfetch ASCII art
     * Uses fastfetch.jsonc for the layout of information shown
     * Sets zsh theme to powerlevel10k
     * Oh-My-ZSH update mode set to auto
     * Oh-My-ZSH update frequency set to once a day
-    
+
 - ## Aliases
     * cat="bat"
     * ls="lsd --group-directories-first -a --color always"
@@ -28,9 +28,13 @@
     * ytmusic()
 
 ```zsh
-ytmusic () {
-    SEARCH_QUERY="$*"
-    mpv --no-audio-display --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
+# Search YT Music and play the first result
+ytm () {
+    # Prompt user for search query
+    read "input?Search Youtube Music....: "
+
+    # Play the selected music
+    mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=${input}"
 }
 ```
 
