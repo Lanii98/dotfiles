@@ -30,11 +30,13 @@
 ```zsh
 # Search YT Music and play the first result
 ytm () {
-    # Prompt user for search query
-    read "input?Search Youtube Music....: "
-
-    # Play the selected music
-    mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=${input}"
+    read "input?Search Youtube Music..: "
+    mpv \
+        --no-video \
+        --quiet \
+        --ytdl-raw-options=extract-audio= \
+        "ytdl://https://music.youtube.com/search?q=${input}" \
+        2>/dev/null
 }
 ```
 
