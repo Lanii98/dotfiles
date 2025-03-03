@@ -148,14 +148,13 @@ ytm() {
 
     # Define color constants
     GREEN_BOLD=$'\033[1;32m'
+    CYAN_BOLD=$'\033[1;36m'
     RED_BOLD=$'\033[1;31m'
     RESET=$'\033[0m'
 
-    # Prompt with green bold color
-    read "input?$GREEN_BOLD Search Youtube Music..: $RESET"
+    read "input?$CYAN_BOLD Search Youtube Music..: $RESET"
 
     if [ -z "$input" ]; then
-        # Display error in red and bold
         echo -e "${RED_BOLD}Error: Please provide a search query${RESET}"
         ytm
         return 1
