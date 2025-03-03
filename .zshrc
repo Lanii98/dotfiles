@@ -121,12 +121,12 @@ alias cat="bat"
 alias ls="lsd --group-directories-first -a --color always"
 
 # Alias that runs a function to automatically move into the new directory
-alias mkdir='f() { 
-		     mkdir $1 && cd $1 
+alias mkdir='f() {
+		     mkdir $1 && cd $1
 		 };
 		 f'
 
-# Yt-dlp 
+# Yt-dlp
 alias yta-aac='yt-dlp --extract-audio --audio-format aac '
 alias yta-best='yt-dlp --extract-audio --audio-format best '
 alias yta-flac='yt-dlp --extract-audio --audio-format flac '
@@ -142,8 +142,12 @@ alias dnfs="dnf search "
 alias dnfr="sudo dnf remove "
 
 alias rms='rm /home/frieren/Pictures/Screenshots/Screenshot*'
+
 # Search YT Music and play the first result
 ytm () {
-    SEARCH_QUERY="$*"
-    mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=$SEARCH_QUERY"
+    # Prompt user for search query
+    read "input?Search Youtube Music....: "
+
+    # Play the selected music
+    mpv --no-video --ytdl-raw-options=extract-audio= "ytdl://https://music.youtube.com/search?q=${input}"
 }
