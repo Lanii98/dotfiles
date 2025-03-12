@@ -51,7 +51,7 @@ alias dnfc="dnf check-upgrade"
 alias dnfs="dnf search "
 alias dnfr="sudo dnf remove "
 
-alias rms='rm /home/frieren/Pictures/Screenshots/Screenshot*'
+alias rms='rm $HOME/Pictures/Screenshots/Screenshot*'
 
 # Search YT Music and play the first result
 ytm() {
