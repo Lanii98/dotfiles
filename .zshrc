@@ -45,7 +45,7 @@ alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+be
 
 # DNF aliases
 alias dnfi="sudo dnf install "
-alias dnfu="sudo dnf upgrade"
+alias dnfu="sudo dnf upgrade --refresh"
 alias dnfa="sudo dnf autoremove"
 alias dnfc="dnf check-upgrade"
 alias dnfs="dnf search "
