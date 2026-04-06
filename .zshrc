@@ -1,4 +1,4 @@
-fastfetch -l "${HOME}/Documents/Frieren.txt" -c "${HOME}/Documents/fastfetch.jsonc" | lolcat
+fastfetch -l "${HOME}/Documents/teto.txt" -c "${HOME}/Documents/fastfetch.jsonc"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -42,6 +42,7 @@ alias yta-best='yt-dlp --extract-audio --audio-format best '
 alias yta-flac='yt-dlp --extract-audio --audio-format flac '
 alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
 alias ytv-best='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv '
+alias ytv-best-sub='yt-dlp -f '\''bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio'\'' --merge-output-format mkv --write-subs --sub-langs "en.*" --embed-subs '
 
 # DNF aliases
 alias dnfi="sudo dnf install "
