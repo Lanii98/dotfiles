@@ -1,4 +1,4 @@
-fastfetch -l "${HOME}/Documents/teto.txt" -c "${HOME}/Documents/fastfetch.jsonc"
+fastfetch -c "${HOME}/Documents/config.jsonc"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -10,7 +10,8 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="steeef"
 
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
